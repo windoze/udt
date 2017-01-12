@@ -18,7 +18,7 @@ function(gtest_unpack_archive)
   external_search_source_path(
     NAME "gtest"
     VAR "GTEST_UNPACK_DIR"
-    CLUES "README"
+    CLUES "README.md"
   )
   
   # Set GTEST_ROOT_DIR

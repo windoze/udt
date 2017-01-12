@@ -61,17 +61,15 @@ if(NOT DEP_BOOST_VERSION)
 endif()
 
 # --- Setup Boost dependencies
-set(Boost_USE_STATIC_LIBS       ON)
+#set(Boost_USE_STATIC_LIBS       ON)
 set(Boost_USE_MULTITHREADED     ON)
-set(Boost_USE_STATIC_RUNTIME    ON)
+#set(Boost_USE_STATIC_RUNTIME    ON)
+ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
 
 # --- Boost components
 find_package(
   Boost REQUIRED 
-  FLAGS 
-    STATIC
-    ${BOOST_PLATFORM_FLAGS}
-  WITH_COMPONENTS
+  COMPONENTS
     system
     serialization
     program_options
